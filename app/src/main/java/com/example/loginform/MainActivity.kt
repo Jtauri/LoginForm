@@ -94,7 +94,8 @@ fun LoginFormPage(modifier: Modifier = Modifier) {
             label = { Text(
                 text = stringResource(R.string.username),
                 fontSize = 12.sp,
-                color = Color.Black
+                /*Tämä määritys ei toimi oikein jos on musta teema puhelimessa*/
+                /* color = Color.Black */
             )},
             singleLine = true,
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Text),
@@ -109,7 +110,7 @@ fun LoginFormPage(modifier: Modifier = Modifier) {
             label = { Text(
                 text = stringResource(R.string.password),
                 fontSize = 12.sp,
-                color = Color.Black
+                /* color = Color.Black */
             )},
             singleLine = true,
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Text),
