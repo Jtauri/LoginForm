@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -45,10 +46,13 @@ class MainActivity : ComponentActivity() {
                     /* Kokeilen täältä viedä modifierin tuonne loginFormPagelle */
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(top = 16.dp, start = 6.dp, end = 6.dp),
+                    /* tuo alempi pätkä pisti paddingiä vähän väärään paikkaan */
+                    /*    .padding(top = 16.dp, start = 6.dp, end = 6.dp) */
+                        ,
+                    containerColor = MaterialTheme.colorScheme.background,
                     content = { innerPadding ->
                         LoginFormPage(
-                            modifier = Modifier.padding(innerPadding)
+                            modifier = Modifier.padding(innerPadding).padding(top = 16.dp, start = 6.dp, end = 6.dp)
                         )
                     }
                 )
@@ -62,6 +66,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun LoginFormPagePreview() {
     LoginFormTheme {
+        /*pitäisköhän tännekin tehdä modifier tjsp*/
         LoginFormPage()
     }
 }
