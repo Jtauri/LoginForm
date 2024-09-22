@@ -1,5 +1,7 @@
 3rd Weekly assignment (Exercise Login form)
 
+<img src="./kannykkakuva.jpg" alt="screencap" align="left" width="150" >
+
 ```kotlin
 package com.example.loginform
 
