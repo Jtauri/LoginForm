@@ -48,10 +48,13 @@ class MainActivity : ComponentActivity() {
                     /* Kokeilen täältä viedä modifierin tuonne loginFormPagelle */
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(top = 16.dp, start = 6.dp, end = 6.dp),
+                    /* tuo alempi pätkä pisti paddingiä vähän väärään paikkaan */
+                    /*    .padding(top = 16.dp, start = 6.dp, end = 6.dp) */
+                        ,
+                    containerColor = MaterialTheme.colorScheme.background,
                     content = { innerPadding ->
                         LoginFormPage(
-                            modifier = Modifier.padding(innerPadding)
+                            modifier = Modifier.padding(innerPadding).padding(top = 16.dp, start = 6.dp, end = 6.dp)
                         )
                     }
                 )
